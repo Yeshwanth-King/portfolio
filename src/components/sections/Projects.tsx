@@ -158,9 +158,7 @@ export default function Projects() {
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className={`group relative ${
-                project.isMainProject ? "lg:col-span-2" : ""
-              }`}
+              className="group relative"
             >
               <div className="bg-[#141414] border border-white/10 rounded-xl p-6 group-hover:border-[#5237f9]/50 transition-all duration-300">
                 {/* Project Status Badge */}
@@ -174,11 +172,6 @@ export default function Projects() {
                   >
                     {project.status}
                   </span>
-                  {project.isMainProject && (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400 border border-green-500/30">
-                      Featured
-                    </span>
-                  )}
                 </div>
 
                 {/* Project Image */}
