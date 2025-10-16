@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'api.screenshotlayer.com',
+        hostname: 'via.placeholder.com',
         port: '',
         pathname: '/**',
       },
@@ -19,6 +19,12 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  // Configure external packages for server components
+  serverExternalPackages: [],
+  // Configure turbopack root to avoid lockfile warnings
+  turbopack: {
+    root: "C:\\Users\\yeshu\\Documents\\Codes\\WEB DEVELOPMENT\\yeshwanth\\portfolio",
   },
 };
 

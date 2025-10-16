@@ -12,7 +12,7 @@ const projects = [
     title: "Captain Side Platform",
     description:
       "Full-stack client platform with UGC reels, admin dashboard, and CMS integration. Built with Next.js, AWS services, and modern web technologies.",
-    image: "/api/screenshot?url=https://captainside.com",
+    image: "/images/projects/captain-side-preview.png",
     technologies: [
       "Next.js",
       "AWS S3",
@@ -31,14 +31,14 @@ const projects = [
     liveUrl: "https://captainside.com",
     githubUrl: null,
     isMainProject: true,
-    status: "Live Production",
+    status: "Current Internship",
   },
   {
     id: 2,
     title: "Shopy - E-Commerce Platform",
     description:
       "Complete e-commerce solution with product management, secure checkout, and admin dashboard. Features Stripe integration and user authentication.",
-    image: "/api/screenshot?url=https://ecommerce-app-ruby-delta.vercel.app",
+    image: "/images/projects/ecommerce-preview.png",
     technologies: ["Next.js", "MongoDB", "Stripe", "NextAuth", "Tailwind CSS"],
     features: [
       "Product Management System",
@@ -57,7 +57,7 @@ const projects = [
     title: "Airbnb Clone",
     description:
       "Modern property listing platform with advanced search, booking system, and responsive design. Built with Next.js and modern UI components.",
-    image: "/api/screenshot?url=https://airbnb-clone-demo.vercel.app",
+    image: "/images/projects/airbnb-clone-preview.png",
     technologies: [
       "Next.js",
       "React",
@@ -72,8 +72,8 @@ const projects = [
       "User Reviews & Ratings",
       "Responsive Design",
     ],
-    liveUrl: "https://airbnb-clone-demo.vercel.app",
-    githubUrl: "https://github.com/Yeshwanth-King/airbnb-clone",
+    liveUrl: "https://air-bnb-clone-beta-azure.vercel.app",
+    githubUrl: "https://github.com/Yeshwanth-King/Air-Bnb-Clone",
     isMainProject: false,
     status: "Live Demo",
   },
@@ -82,7 +82,7 @@ const projects = [
     title: "Encrypted Chat App",
     description:
       "Real-time encrypted messaging application with room management, online tracking, and read receipts. Built with Socket.IO and Cryptr encryption.",
-    image: "/api/screenshot?url=https://chat-app-demo.vercel.app",
+    image: "/images/projects/chat-app-preview.png",
     technologies: ["Next.js", "Express.js", "Socket.IO", "Cryptr", "MongoDB"],
     features: [
       "End-to-End Encryption",
@@ -91,8 +91,8 @@ const projects = [
       "Online Status Tracking",
       "Read Receipts",
     ],
-    liveUrl: "https://chat-app-demo.vercel.app",
-    githubUrl: "https://github.com/Yeshwanth-King/chat-app",
+    liveUrl: "https://chat-at-dsu.vercel.app",
+    githubUrl: "https://github.com/Yeshwanth-King/ChatAtDSU",
     isMainProject: false,
     status: "Live Demo",
   },
@@ -165,7 +165,13 @@ export default function Projects() {
               <div className="bg-[#141414] border border-white/10 rounded-xl p-6 group-hover:border-[#5237f9]/50 transition-all duration-300">
                 {/* Project Status Badge */}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#5237f9]/20 text-[#5237f9] border border-[#5237f9]/30">
+                  <span
+                    className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
+                      project.status === "Current Internship"
+                        ? "bg-orange-500/20 text-orange-400 border border-orange-500/30"
+                        : "bg-[#5237f9]/20 text-[#5237f9] border border-[#5237f9]/30"
+                    }`}
+                  >
                     {project.status}
                   </span>
                   {project.isMainProject && (
@@ -177,16 +183,18 @@ export default function Projects() {
 
                 {/* Project Image */}
                 <div className="relative mb-6 overflow-hidden rounded-lg group/image">
-                  <Image
-                    src={project.image}
-                    alt={`${project.title} preview`}
-                    width={600}
-                    height={400}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover/image:scale-105"
-                    onError={() => {
-                      // Fallback handled by CSS
-                    }}
-                  />
+                  <div className="aspect-[4/3] w-full max-h-64">
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover/image:scale-105"
+                      onError={() => {
+                        // Fallback handled by CSS
+                      }}
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-[#5237f9]/20 to-[#5237f9]/5 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                     <div className="text-center">
                       <div className="w-16 h-16 mx-auto mb-4 bg-[#5237f9]/20 rounded-lg flex items-center justify-center">

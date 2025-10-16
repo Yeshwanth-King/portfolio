@@ -21,10 +21,6 @@ const Hero = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
     },
   };
 
@@ -32,10 +28,6 @@ const Hero = () => {
     hidden: { width: 0 },
     visible: {
       width: "auto",
-      transition: {
-        duration: 2,
-        ease: "easeInOut",
-      },
     },
   };
 
@@ -100,17 +92,26 @@ const Hero = () => {
           className="text-center"
         >
           {/* Greeting */}
-          <motion.div variants={itemVariants} className="mb-4">
+          <motion.div
+            variants={itemVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mb-4"
+          >
             <span className="text-[#5237f9] text-lg font-medium">
-              Hello, I'm
+              Hello, I&apos;m
             </span>
           </motion.div>
 
           {/* Name with Typewriter Effect */}
-          <motion.div variants={itemVariants} className="mb-6">
+          <motion.div
+            variants={itemVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mb-6"
+          >
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-4">
               <motion.span
                 variants={typewriterVariants}
+                transition={{ duration: 2, ease: "easeInOut" }}
                 className="inline-block overflow-hidden whitespace-nowrap"
               >
                 Yeshwanth R
@@ -119,7 +120,11 @@ const Hero = () => {
           </motion.div>
 
           {/* Tagline */}
-          <motion.div variants={itemVariants} className="mb-8">
+          <motion.div
+            variants={itemVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mb-8"
+          >
             <h2 className="text-xl sm:text-2xl lg:text-3xl text-white/80 font-light">
               Full Stack Developer & Problem Solver
             </h2>
@@ -132,6 +137,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button
@@ -165,6 +171,7 @@ const Hero = () => {
           {/* Stats */}
           <motion.div
             variants={itemVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto"
           >
             {[
