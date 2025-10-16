@@ -7,11 +7,13 @@ import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import ScrollRestoration from "@/components/ScrollRestoration";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black">
       <ScrollRestoration />
+      <SmoothScroll />
       <Navigation />
       <Hero />
       <Skills />
