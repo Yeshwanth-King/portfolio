@@ -4,7 +4,16 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Code, Database, Cloud, Smartphone, Zap, Shield } from "lucide-react";
+import {
+  Code,
+  Database,
+  Cloud,
+  Smartphone,
+  Shield,
+  Star,
+  TrendingUp,
+  Rocket,
+} from "lucide-react";
 
 const Skills = () => {
   const ref = useRef(null);
@@ -12,51 +21,59 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Frontend",
-      icon: <Code className="h-6 w-6" />,
-      color: "text-blue-400",
+      title: "Frontend Development",
+      icon: <Code className="h-8 w-8" />,
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "bg-blue-500/10",
+      borderColor: "border-blue-500/20",
       skills: [
-        { name: "Next.js", level: 90 },
-        { name: "React", level: 95 },
-        { name: "TypeScript", level: 85 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "shadcn/ui", level: 80 },
+        { name: "Next.js", level: 95, icon: "⚡" },
+        { name: "React", level: 98, icon: "⚛️" },
+        { name: "TypeScript", level: 90, icon: "🔷" },
+        { name: "Tailwind CSS", level: 92, icon: "🎨" },
+        { name: "shadcn/ui", level: 85, icon: "🧩" },
       ],
     },
     {
-      title: "Backend",
-      icon: <Database className="h-6 w-6" />,
-      color: "text-green-400",
+      title: "Backend & APIs",
+      icon: <Database className="h-8 w-8" />,
+      color: "from-green-500 to-emerald-500",
+      bgColor: "bg-green-500/10",
+      borderColor: "border-green-500/20",
       skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Express.js", level: 80 },
-        { name: "Prisma", level: 75 },
-        { name: "Stripe", level: 70 },
-        { name: "Socket.IO", level: 85 },
+        { name: "Node.js", level: 88, icon: "🟢" },
+        { name: "Express.js", level: 85, icon: "🚀" },
+        { name: "Prisma", level: 80, icon: "🔧" },
+        { name: "Stripe", level: 75, icon: "💳" },
+        { name: "Socket.IO", level: 90, icon: "🔌" },
       ],
     },
     {
       title: "Cloud & DevOps",
-      icon: <Cloud className="h-6 w-6" />,
-      color: "text-yellow-400",
+      icon: <Cloud className="h-8 w-8" />,
+      color: "from-orange-500 to-yellow-500",
+      bgColor: "bg-orange-500/10",
+      borderColor: "border-orange-500/20",
       skills: [
-        { name: "AWS S3", level: 80 },
-        { name: "AWS CloudFront", level: 75 },
-        { name: "AWS Lambda", level: 70 },
-        { name: "AWS RDS", level: 75 },
-        { name: "AWS EC2", level: 70 },
+        { name: "AWS S3", level: 85, icon: "☁️" },
+        { name: "CloudFront", level: 80, icon: "⚡" },
+        { name: "AWS Lambda", level: 75, icon: "λ" },
+        { name: "AWS RDS", level: 82, icon: "🗄️" },
+        { name: "AWS EC2", level: 78, icon: "🖥️" },
       ],
     },
     {
-      title: "Mobile & Tools",
-      icon: <Smartphone className="h-6 w-6" />,
-      color: "text-purple-400",
+      title: "Database & Tools",
+      icon: <Smartphone className="h-8 w-8" />,
+      color: "from-purple-500 to-pink-500",
+      bgColor: "bg-purple-500/10",
+      borderColor: "border-purple-500/20",
       skills: [
-        { name: "MongoDB", level: 80 },
-        { name: "Supabase", level: 75 },
-        { name: "Google Analytics", level: 70 },
-        { name: "PostHog", level: 65 },
-        { name: "Git", level: 85 },
+        { name: "MongoDB", level: 88, icon: "🍃" },
+        { name: "Supabase", level: 82, icon: "⚡" },
+        { name: "Google Analytics", level: 75, icon: "📊" },
+        { name: "PostHog", level: 70, icon: "📈" },
+        { name: "Git", level: 92, icon: "🌿" },
       ],
     },
   ];
@@ -78,6 +95,41 @@ const Skills = () => {
     "Framer Motion",
     "Google Analytics",
     "PostHog",
+    "Vercel",
+    "Docker",
+    "GitHub",
+    "VS Code",
+  ];
+
+  const expertiseAreas = [
+    {
+      title: "Full-Stack Development",
+      description: "End-to-end web application development",
+      icon: <Rocket className="h-6 w-6" />,
+      color: "text-blue-400",
+      stats: "2+ Years",
+    },
+    {
+      title: "Cloud Architecture",
+      description: "Scalable AWS-based solutions",
+      icon: <Cloud className="h-6 w-6" />,
+      color: "text-orange-400",
+      stats: "5+ Projects",
+    },
+    {
+      title: "Performance Optimization",
+      description: "Fast, responsive applications",
+      icon: <TrendingUp className="h-6 w-6" />,
+      color: "text-green-400",
+      stats: "95%+ Score",
+    },
+    {
+      title: "Security Implementation",
+      description: "Secure authentication & data protection",
+      icon: <Shield className="h-6 w-6" />,
+      color: "text-purple-400",
+      stats: "Zero Breaches",
+    },
   ];
 
   const containerVariants = {
@@ -114,184 +166,204 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section
+      id="skills"
+      className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+    >
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#5237f9]/5 via-transparent to-[#6b46f9]/5"></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#5237f9]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#6b46f9]/10 rounded-full blur-3xl"></div>
+
+      <div className="max-w-7xl mx-auto relative">
         <motion.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "visible"}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <motion.div variants={itemVariants} className="mb-4">
+          <motion.div variants={itemVariants} className="mb-6">
             <Badge
               variant="secondary"
-              className="text-[#5237f9] border-[#5237f9]/20"
+              className="text-[#5237f9] border-[#5237f9]/20 bg-[#5237f9]/5 px-4 py-2"
             >
-              <Zap className="mr-2 h-4 w-4" />
-              Technical Skills
+              <Star className="mr-2 h-4 w-4" />
+              Technical Excellence
             </Badge>
           </motion.div>
 
           <motion.h2
             variants={itemVariants}
-            className="text-4xl sm:text-5xl font-bold text-white mb-6"
+            className="text-5xl sm:text-6xl font-bold text-white mb-6"
           >
-            Skills & <span className="text-[#5237f9]">Expertise</span>
+            Skills &{" "}
+            <span className="bg-gradient-to-r from-[#5237f9] to-[#6b46f9] bg-clip-text text-transparent">
+              Expertise
+            </span>
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
-            className="text-xl text-white/60 max-w-3xl mx-auto"
+            className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed"
           >
-            A comprehensive toolkit for building modern, scalable web
-            applications
+            Building modern, scalable applications with cutting-edge
+            technologies and best practices
           </motion.p>
         </motion.div>
 
-        {/* Skill Categories */}
+        {/* Expertise Areas */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "visible"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16"
+        >
+          {expertiseAreas.map((area, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="group relative"
+            >
+              <div className="bg-gradient-to-br from-[#141414] to-[#0a0a0a] border border-white/10 rounded-xl p-4 h-full backdrop-blur-sm group-hover:border-[#5237f9]/30 transition-all duration-300">
+                <div className="flex items-center justify-between mb-3">
+                  <div className={`${area.color} p-2 rounded-lg bg-white/5`}>
+                    {area.icon}
+                  </div>
+                  <span className="text-xl font-bold text-[#5237f9]">
+                    {area.stats}
+                  </span>
+                </div>
+                <h3 className="text-base font-semibold text-white mb-2">
+                  {area.title}
+                </h3>
+                <p className="text-white/60 text-xs leading-relaxed">
+                  {area.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Skill Categories - New Design */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "visible"}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16"
         >
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
               variants={itemVariants}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-[#141414] border border-white/10 rounded-xl p-6 group"
+              whileHover={{ scale: 1.02, y: -3 }}
+              className="group relative"
             >
-              <div className="flex items-center mb-6">
-                <div className={`${category.color} mr-3`}>{category.icon}</div>
-                <h3 className="text-xl font-semibold text-white">
-                  {category.title}
-                </h3>
-              </div>
-
-              <div className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-white/80 text-sm">
-                        {skill.name}
-                      </span>
-                      <span className="text-[#5237f9] text-sm font-medium">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="w-full bg-white/10 rounded-full h-2">
-                      <motion.div
-                        className="bg-gradient-to-r from-[#5237f9] to-[#6b46f9] h-2 rounded-full"
-                        variants={progressVariants}
-                        custom={skill.level}
-                        initial="hidden"
-                        animate={isInView ? "visible" : "visible"}
-                        transition={{
-                          delay: categoryIndex * 0.1 + skillIndex * 0.1,
-                        }}
-                      />
-                    </div>
+              <div
+                className={`${category.bgColor} ${category.borderColor} border rounded-xl p-6 h-full backdrop-blur-sm group-hover:shadow-2xl transition-all duration-300`}
+              >
+                <div className="flex items-center mb-6">
+                  <div
+                    className={`bg-gradient-to-r ${category.color} p-3 rounded-xl mr-3 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    {category.icon}
                   </div>
-                ))}
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {category.title}
+                    </h3>
+                    <div className="w-12 h-1 bg-gradient-to-r from-[#5237f9] to-[#6b46f9] rounded-full"></div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  {category.skills.map((skill, skillIndex) => (
+                    <motion.div key={skillIndex} className="group/skill">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center space-x-2">
+                          <span className="text-lg">{skill.icon}</span>
+                          <span className="text-white font-medium text-sm">
+                            {skill.name}
+                          </span>
+                        </div>
+                        <span className="text-[#5237f9] font-bold text-base">
+                          {skill.level}%
+                        </span>
+                      </div>
+                      <div className="relative">
+                        <div className="w-full bg-white/10 rounded-full h-2 overflow-hidden">
+                          <motion.div
+                            className={`bg-gradient-to-r ${category.color} h-2 rounded-full relative`}
+                            variants={progressVariants}
+                            custom={skill.level}
+                            initial="hidden"
+                            animate={isInView ? "visible" : "visible"}
+                            transition={{
+                              delay: categoryIndex * 0.2 + skillIndex * 0.1,
+                            }}
+                          >
+                            <div className="absolute inset-0 bg-white/20 rounded-full animate-pulse"></div>
+                          </motion.div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Technology Tags - Moving Animation */}
+        {/* Technology Tags - Enhanced Design */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "visible"}
-          className="text-center"
+          className="text-center mb-12"
         >
           <motion.h3
             variants={itemVariants}
-            className="text-2xl font-semibold text-white mb-8"
+            className="text-3xl font-bold text-white mb-4"
           >
-            Technologies I Work With
+            Technology <span className="text-[#5237f9]">Stack</span>
           </motion.h3>
+          <motion.p variants={itemVariants} className="text-white/60 mb-8">
+            Modern tools and frameworks I use to build exceptional applications
+          </motion.p>
         </motion.div>
 
-        {/* Moving badges container - using pure CSS */}
-        <div className="relative overflow-hidden">
+        {/* Moving badges container - Enhanced */}
+        <div className="relative overflow-hidden mb-20">
           {/* First row moving right to left */}
-          <div className="flex gap-3 mb-3 animate-scroll-right">
+          <div className="flex gap-4 mb-4 animate-scroll-right">
             {[...technologies, ...technologies].map((tech, index) => (
-              <div
+              <motion.div
                 key={`row1-${index}`}
-                className="flex-shrink-0 glass rounded-full px-4 py-2 border border-white/10 hover:border-[#5237f9] hover:shadow-[0_0_20px_rgba(82,55,249,0.3)] transition-all duration-300"
+                whileHover={{ scale: 1.1, y: -5 }}
+                className="flex-shrink-0 bg-gradient-to-r from-[#5237f9]/10 to-[#6b46f9]/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-[#5237f9]/20 hover:border-[#5237f9]/40 hover:shadow-[0_0_30px_rgba(82,55,249,0.3)] transition-all duration-300"
               >
-                <span className="text-white/80 text-sm font-medium">
-                  {tech}
-                </span>
-              </div>
+                <span className="text-white font-medium text-sm">{tech}</span>
+              </motion.div>
             ))}
           </div>
 
           {/* Second row moving left to right */}
-          <div className="flex gap-3 animate-scroll-left">
+          <div className="flex gap-4 animate-scroll-left">
             {[
               ...technologies.slice().reverse(),
               ...technologies.slice().reverse(),
             ].map((tech, index) => (
-              <div
+              <motion.div
                 key={`row2-${index}`}
-                className="flex-shrink-0 glass rounded-full px-4 py-2 border border-white/10 hover:border-[#5237f9] hover:shadow-[0_0_20px_rgba(82,55,249,0.3)] transition-all duration-300"
+                whileHover={{ scale: 1.1, y: -5 }}
+                className="flex-shrink-0 bg-gradient-to-r from-[#6b46f9]/10 to-[#5237f9]/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-[#6b46f9]/20 hover:border-[#6b46f9]/40 hover:shadow-[0_0_30px_rgba(106,70,249,0.3)] transition-all duration-300"
               >
-                <span className="text-white/80 text-sm font-medium">
-                  {tech}
-                </span>
-              </div>
+                <span className="text-white font-medium text-sm">{tech}</span>
+              </motion.div>
             ))}
           </div>
         </div>
-
-        {/* Key Achievements */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "visible"}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
-          {[
-            {
-              icon: <Shield className="h-8 w-8" />,
-              title: "Security Focused",
-              description:
-                "Implementing secure authentication and data protection in all applications",
-            },
-            {
-              icon: <Zap className="h-8 w-8" />,
-              title: "Performance Optimized",
-              description:
-                "Building fast, responsive applications with modern optimization techniques",
-            },
-            {
-              icon: <Cloud className="h-8 w-8" />,
-              title: "Cloud Native",
-              description:
-                "Expertise in AWS services and scalable cloud architectures",
-            },
-          ].map((achievement, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              className="bg-[#141414] border border-white/10 rounded-xl p-6 text-center group"
-            >
-              <div className="text-[#5237f9] mb-4 flex justify-center">
-                {achievement.icon}
-              </div>
-              <h4 className="text-xl font-semibold text-white mb-3">
-                {achievement.title}
-              </h4>
-              <p className="text-white/60">{achievement.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

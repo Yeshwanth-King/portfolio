@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   User,
   MapPin,
@@ -13,6 +14,7 @@ import {
   Code,
   Coffee,
   Music,
+  Download,
 } from "lucide-react";
 
 const About = () => {
@@ -57,7 +59,7 @@ const About = () => {
     {
       icon: <Code className="h-5 w-5" />,
       label: "Experience",
-      value: "1+ years",
+      value: "2+ years",
     },
   ];
 
@@ -152,9 +154,9 @@ const About = () => {
                 <p>
                   When I&apos;m not coding, you&apos;ll find me exploring new
                   technologies, contributing to open-source projects, or
-                  participating in hackathons where I&apos;ve won several
-                  competitions including 1st place at BuiltIt Hackathon as a
-                  solo participant.
+                  participating in hackathons where I&apos;ve won multiple
+                  competitions including 1st place at BuiltIt Hackathon and
+                  reaching finals at IIT Dharwad Dev Hacks.
                 </p>
               </div>
             </motion.div>
@@ -295,6 +297,23 @@ const About = () => {
                 Open Source Contributor
               </Badge>
             </div>
+
+            {/* Resume Download Button */}
+            <motion.div variants={itemVariants} className="mt-8">
+              <Button
+                onClick={() => {
+                  // Open Google Drive resume for download
+                  window.open(
+                    "https://drive.google.com/uc?export=download&id=1MUlVzw3PDTNzdKOzncAgiQVEvefSLM8A",
+                    "_blank"
+                  );
+                }}
+                className="bg-[#5237f9] hover:bg-[#6b46f9] text-white px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </Button>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

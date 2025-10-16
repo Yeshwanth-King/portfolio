@@ -157,14 +157,16 @@ const Hero = () => {
               variant="outline"
               size="lg"
               className="border-white/20 text-white hover:bg-white/10 px-8 py-3 text-lg group"
-              onClick={() =>
-                document
-                  .querySelector("#contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={() => {
+                // Open Google Drive resume in new tab for viewing
+                window.open(
+                  "https://drive.google.com/file/d/1MUlVzw3PDTNzdKOzncAgiQVEvefSLM8A/view",
+                  "_blank"
+                );
+              }}
             >
               <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-              Download Resume
+              View Resume
             </Button>
           </motion.div>
 
@@ -175,9 +177,9 @@ const Hero = () => {
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto"
           >
             {[
-              { number: "1+", label: "Years Experience" },
+              { number: "2+", label: "Years Experience" },
               { number: "10+", label: "Projects Built" },
-              { number: "1", label: "Hackathon Win" },
+              { number: "2", label: "Hackathon Wins" },
               { number: "100%", label: "Client Satisfaction" },
             ].map((stat, index) => (
               <motion.div
