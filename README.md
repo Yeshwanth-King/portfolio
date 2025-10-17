@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my skills, experience, and pro
 
 ## 🚀 Live Demo
 
-[View Live Portfolio](https://your-portfolio.vercel.app) *(Update with your actual domain)*
+[View Live Portfolio](https://yeshwanth.live)
 
 ## 🛠️ Tech Stack
 
@@ -87,7 +87,7 @@ A modern, responsive portfolio website showcasing my skills, experience, and pro
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/Yeshwanth-King/portfolio.git
    cd portfolio
    ```
 
@@ -152,13 +152,15 @@ portfolio/
 - [x] Responsive design for all sections
 - [x] Performance optimization and image loading
 - [x] Advanced animations and micro-interactions
-- [x] Deployment ready
+- [x] SEO optimization with meta tags and structured data
+- [x] Google Analytics integration
+- [x] Sitemap and robots.txt for search engines
+- [x] PWA manifest for mobile optimization
+- [x] Deployment ready and live at https://yeshwanth.live
 
 ### 📋 Remaining Tasks
-1. **SEO Optimization** - Meta tags and structured data
-2. **Analytics Integration** - Google Analytics setup
-3. **Final Testing** - Cross-browser testing
-4. **README Updates** - Replace placeholder information
+1. **Final Testing** - Cross-browser testing
+2. **README Updates** - Replace placeholder information
 
 ## 🚀 Deployment
 
@@ -174,10 +176,11 @@ portfolio/
 
 ## 📧 Contact
 
-- **Email:** your.email@example.com
-- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
-- **GitHub:** [Your GitHub Profile](https://github.com/your-username)
-- **Portfolio:** [Your Portfolio Website](https://your-portfolio.vercel.app)
+- **Email:** yeshuyeshwanth2005@gmail.com
+- **LinkedIn:** [Yeshwanth R](https://www.linkedin.com/in/-yeshwanth-r/)
+- **GitHub:** [Yeshwanth-King](https://github.com/Yeshwanth-King)
+- **X (Twitter):** [@YESHWANTH_R_](https://x.com/YESHWANTH_R_)
+- **Portfolio:** [yeshwanth.live](https://yeshwanth.live)
 
 ## 📄 License
 
