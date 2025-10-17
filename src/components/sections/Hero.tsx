@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
+import { trackResumeDownload } from "@/lib/analytics";
 
 const Hero = () => {
   const containerVariants = {
@@ -158,6 +159,8 @@ const Hero = () => {
               size="lg"
               className="border-white/20 text-white hover:bg-white/10 px-8 py-3 text-lg group"
               onClick={() => {
+                // Track resume download event
+                trackResumeDownload();
                 // Open Google Drive resume in new tab for viewing
                 window.open(
                   "https://drive.google.com/file/d/1MUlVzw3PDTNzdKOzncAgiQVEvefSLM8A/view",

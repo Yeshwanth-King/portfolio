@@ -5,6 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { trackProjectClick, trackProjectView } from "@/lib/analytics";
 
 const projects = [
   {
@@ -253,6 +254,7 @@ export default function Projects() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => trackProjectClick(project.title, 'live_demo')}
                         className="flex items-center gap-2 px-4 py-2 bg-[#5237f9] text-white rounded-lg hover:bg-[#6b46f9] transition-colors text-sm font-medium"
                       >
                         <ExternalLink className="w-4 h-4" />
@@ -264,6 +266,7 @@ export default function Projects() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => trackProjectClick(project.title, 'github')}
                         className="flex items-center gap-2 px-4 py-2 border border-white/20 text-white rounded-lg hover:border-[#5237f9]/50 hover:text-[#5237f9] transition-colors text-sm font-medium"
                       >
                         <Github className="w-4 h-4" />

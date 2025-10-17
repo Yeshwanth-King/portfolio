@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import ScrollTracker from "@/components/ScrollTracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -151,6 +152,7 @@ export default function RootLayout({
       >
         {children}
         <GoogleAnalytics />
+        <ScrollTracker />
         <script
           dangerouslySetInnerHTML={{
             __html: `

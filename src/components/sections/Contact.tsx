@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { trackContactFormSubmit } from "@/lib/analytics";
 import {
   Mail,
   Phone,
@@ -119,6 +120,8 @@ const Contact = () => {
       });
 
       if (response.ok) {
+        // Track successful form submission
+        trackContactFormSubmit();
         // Reset form
         setFormData({ name: "", email: "", subject: "", message: "" });
         setSubmitStatus("success");
