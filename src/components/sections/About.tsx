@@ -304,7 +304,7 @@ const About = () => {
                 onClick={() => {
                   // Open Google Drive resume for download
                   window.open(
-                    "https://drive.google.com/uc?export=download&id=1MUlVzw3PDTNzdKOzncAgiQVEvefSLM8A",
+                    "https://docs.google.com/document/d/1OTktuk0ci7Db-uLMNscEzA3wHheeNA3o/edit?usp=sharing&ouid=111525234869359600369&rtpof=true&sd=true",
                     "_blank"
                   );
                 }}

@@ -163,7 +163,7 @@ const Hero = () => {
                 trackResumeDownload();
                 // Open Google Drive resume in new tab for viewing
                 window.open(
-                  "https://drive.google.com/file/d/1MUlVzw3PDTNzdKOzncAgiQVEvefSLM8A/view",
+                  "https://docs.google.com/document/d/1OTktuk0ci7Db-uLMNscEzA3wHheeNA3o/edit?usp=sharing&ouid=111525234869359600369&rtpof=true&sd=true",
                   "_blank"
                 );
               }}
